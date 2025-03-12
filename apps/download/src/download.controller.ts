@@ -1,5 +1,5 @@
-import { Controller, Get } from '@nestjs/common';
-import { DownloadService } from './download.service';
+import { Controller, Get } from '@nestjs/common'
+import { DownloadService } from './download.service'
 
 @Controller()
 export class DownloadController {
@@ -7,6 +7,6 @@ export class DownloadController {
 
   @Get()
   getHello(): string {
-    return this.downloadService.getHello();
+    return this.downloadService.getHello()
   }
 }

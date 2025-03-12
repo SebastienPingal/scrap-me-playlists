@@ -1,5 +1,5 @@
-import { Controller, Get } from '@nestjs/common';
-import { SpotifyService } from './spotify.service';
+import { Controller, Get } from '@nestjs/common'
+import { SpotifyService } from './spotify.service'
 
 @Controller()
 export class SpotifyController {
@@ -7,6 +7,6 @@ export class SpotifyController {
 
   @Get()
   getHello(): string {
-    return this.spotifyService.getHello();
+    return this.spotifyService.getHello()
   }
 }

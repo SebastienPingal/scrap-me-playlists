@@ -1,5 +1,5 @@
-import { Controller, Get } from '@nestjs/common';
-import { StorageService } from './storage.service';
+import { Controller, Get } from '@nestjs/common'
+import { StorageService } from './storage.service'
 
 @Controller()
 export class StorageController {
@@ -7,6 +7,6 @@ export class StorageController {
 
   @Get()
   getHello(): string {
-    return this.storageService.getHello();
+    return this.storageService.getHello()
   }
 }

@@ -1,6 +1,6 @@
-import { Module } from '@nestjs/common';
-import { ScrapMePlaylistsApiGatewayController } from './scrap-me-playlists-api-gateway.controller';
-import { ScrapMePlaylistsApiGatewayService } from './scrap-me-playlists-api-gateway.service';
+import { Module } from '@nestjs/common'
+import { ScrapMePlaylistsApiGatewayController } from './scrap-me-playlists-api-gateway.controller'
+import { ScrapMePlaylistsApiGatewayService } from './scrap-me-playlists-api-gateway.service'
 
 @Module({
   imports: [],
