@@ -1,7 +1,7 @@
 import { Test, TestingModule } from '@nestjs/testing'
 import { INestApplication } from '@nestjs/common'
 import * as request from 'supertest'
-import { DownloadModule } from './../src/download.module'
+import { DownloadModule } from '../src/download-app.module'
 
 describe('DownloadController (e2e)', () => {
   let app: INestApplication

@@ -1,1 +1,15 @@
 GET http://localhost:3000/spotify
+
+###
+GET http://localhost:3000/download
+
+###
+POST http://localhost:3000/download
+Content-Type: application/json
+
+{
+  "name": "Download 1",
+  "url": "https://www.google.com"
+}
+
+###
