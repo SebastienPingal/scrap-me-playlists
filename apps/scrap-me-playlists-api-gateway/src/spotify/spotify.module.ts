@@ -1,18 +1,23 @@
 import { Module } from '@nestjs/common'
 import { ClientsModule, Transport } from '@nestjs/microservices'
+import { ConfigService, getServicePort, ServiceName, SharedConfigModule } from '@app/config'
 
 import { SpotifyController } from './spotify.controller'
 import { SpotifyService } from './spotify.service'
 
 @Module({
   imports: [
-    ClientsModule.register([
+    ClientsModule.registerAsync([
       {
         name: 'SPOTIFY_CLIENT',
-        transport: Transport.TCP,
-        options: {
-          port: 3001,
-        },
+        imports: [SharedConfigModule],
+        inject: [ConfigService],
+        useFactory: (configService: ConfigService) => ({
+          transport: Transport.TCP,
+          options: {
+            port: getServicePort(configService, ServiceName.SPOTIFY),
+          },
+        }),
       },
     ]),
   ],

@@ -7,7 +7,6 @@ export class SpotifyController {
 
   @Get()
   getPlaylists() {
-    console.log('🚪 getPlaylists controller gateway')
     return this.spotifyService.getPlaylists()
   }
 }

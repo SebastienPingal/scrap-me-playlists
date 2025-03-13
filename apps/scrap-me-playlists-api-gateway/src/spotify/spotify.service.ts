@@ -7,6 +7,8 @@ export class SpotifyService {
 
   getPlaylists() {
     console.log('🚪 getPlaylists service gateway')
-    return this.spotifyClient.send('spotify.getPlaylists', {})
+    const playlists = this.spotifyClient.send('spotify.getPlaylists', {})
+    console.log('playlists', playlists)
+    return playlists
   }
 }
