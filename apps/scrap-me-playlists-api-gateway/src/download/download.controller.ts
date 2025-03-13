@@ -1,7 +1,6 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common'
 import { DownloadService } from './download.service'
-import { CreateDownloadDto } from './dto/create-download.dto'
-import { UpdateDownloadDto } from './dto/update-download.dto'
+import { CreateDownloadDto, UpdateDownloadDto } from '@app/contracts'
 
 @Controller('download')
 export class DownloadController {

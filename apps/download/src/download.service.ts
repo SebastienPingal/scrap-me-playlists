@@ -1,7 +1,5 @@
 import { Injectable } from '@nestjs/common'
-import { CreateDownloadDto } from './dto/create-download.dto'
-import { UpdateDownloadDto } from './dto/update-download.dto'
-import { DownloadDto } from './dto/download.dto'
+import { CreateDownloadDto, UpdateDownloadDto, DownloadDto } from '@app/contracts'
 @Injectable()
 export class DownloadService {
   private downloads: DownloadDto[] = [

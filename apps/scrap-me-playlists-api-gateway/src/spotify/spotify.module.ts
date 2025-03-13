@@ -1,5 +1,5 @@
-import { ClientsModule, Transport } from '@nestjs/microservices'
 import { Module } from '@nestjs/common'
+import { ClientsModule, Transport } from '@nestjs/microservices'
 
 import { SpotifyController } from './spotify.controller'
 import { SpotifyService } from './spotify.service'

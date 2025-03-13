@@ -1,8 +1,8 @@
 import { Module } from '@nestjs/common'
+import { ClientsModule, Transport } from '@nestjs/microservices'
+
 import { DownloadService } from './download.service'
 import { DownloadController } from './download.controller'
-import { ClientsModule } from '@nestjs/microservices'
-import { Transport } from '@nestjs/microservices'
 
 @Module({
   imports: [
