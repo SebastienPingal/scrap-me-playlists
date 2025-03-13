@@ -1,12 +1,16 @@
-import { Controller, Get } from '@nestjs/common'
+import { Controller } from '@nestjs/common'
 import { SpotifyService } from './spotify.service'
+import { MessagePattern } from '@nestjs/microservices'
 
 @Controller()
 export class SpotifyController {
-  constructor(private readonly spotifyService: SpotifyService) {}
+  constructor(private readonly spotifyService: SpotifyService) { }
 
-  @Get()
-  getHello(): string {
-    return this.spotifyService.getHello()
+  @MessagePattern('spotify.getPlaylists')
+  getPlaylists() {
+    console.log('🔈 getPlaylists controller microservice')
+    const playlists = this.spotifyService.getPlaylists()
+    console.log('playlists', playlists)
+    return playlists
   }
 }
